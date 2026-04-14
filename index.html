@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remembro — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0e0e0f;
+      --surface: #16161a;
+      --border: #2a2a30;
+      --accent: #c9a84c;
+      --accent-dim: rgba(201,168,76,0.12);
+      --text: #e8e6e0;
+      --muted: #7a7870;
+      --red: #e05a4a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 72px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .app-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* Divider */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+      margin: 48px 0;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 56px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.15s; }
+    section:nth-child(4) { animation-delay: 0.2s; }
+    section:nth-child(5) { animation-delay: 0.25s; }
+    section:nth-child(6) { animation-delay: 0.3s; }
+    section:nth-child(7) { animation-delay: 0.35s; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 .num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    p {
+      color: #b0ada6;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0;
+      padding: 0;
+    }
+
+    ul li {
+      color: #b0ada6;
+      font-size: 15px;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: var(--accent-dim);
+      border-left: 2px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 0 4px 4px 0;
+      margin: 24px 0;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: #c8c4bc;
+    }
+
+    /* Contact */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 24px;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .contact-box a:hover { opacity: 0.7; }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      animation: fadeUp 0.8s 0.4s ease both;
+    }
+
+    footer span {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .logo-footer {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .wrap { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="app-label">Remembro App</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="meta">Effective date: April 14, 2025 &nbsp;·&nbsp; Last updated: April 14, 2025</p>
+  </header>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="highlight">
+      <p>Remembro is a voice-powered calendar app. We are committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span> What Data We Collect</h2>
+    <p>Remembro may access the following data to provide its core functionality:</p>
+    <ul>
+      <li><strong>Voice input</strong> — audio is captured and transcribed on-device via Apple's Speech Recognition framework. The resulting text is then sent to Anthropic's API to extract event details (title, date, time). The original audio is never stored or transmitted.</li>
+      <li><strong>Calendar data</strong> — event titles, dates, and times created through the app. This data is stored in your personal Apple Calendar (EventKit) and never transmitted to our servers.</li>
+      <li><strong>Device identifiers</strong> — anonymous crash and diagnostics data used solely to improve app stability.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> How We Use Your Data</h2>
+    <p>We use your data exclusively to:</p>
+    <ul>
+      <li>Transcribe your voice into calendar events</li>
+      <li>Add events to your Apple Calendar on your behalf</li>
+      <li>Diagnose crashes and improve app performance</li>
+    </ul>
+    <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties for marketing purposes.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Microphone & Calendar Access</h2>
+    <p>Remembro requests access to your microphone and calendar. These permissions are used solely within the app to provide the dictation feature. You can revoke permissions at any time via <strong>Settings → Privacy</strong> on your device.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Data Storage & Security</h2>
+    <p>Remembro does not operate its own backend servers. All event data lives in your iCloud / Apple Calendar, protected by Apple's security infrastructure. Voice audio is not recorded or retained after transcription.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Third-Party Services</h2>
+    <p>The app may use the following frameworks and services:</p>
+    <ul>
+      <li><strong>Speech Framework</strong> — for voice-to-text transcription (governed by Apple's Privacy Policy)</li>
+      <li><strong>EventKit</strong> — for calendar integration (data stays on your device / iCloud)</li>
+      <li><strong>Anthropic API</strong> — the transcribed text of your voice command is sent to Anthropic's servers to extract event details (title, date, time). No audio is transmitted. Governed by <a href="https://www.anthropic.com/privacy" style="color:var(--accent)">Anthropic's Privacy Policy</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Children's Privacy</h2>
+    <p>Remembro is not directed at children under 13. We do not knowingly collect personal data from children.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access and review data stored by the app</li>
+      <li>Delete all calendar events created via Remembro through your native Calendar app</li>
+      <li>Revoke microphone or calendar permissions at any time</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. The "Last updated" date at the top will reflect any changes. Continued use of the app after changes constitutes acceptance.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span> Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please reach out:</p>
+    <div class="contact-box">
+      <p>📧 <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a></p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>
+    <span>© 2025 Remembro. All rights reserved.</span>
+    <span class="logo-footer">Remembro</span>
+  </footer>
+
+</div>
+</body>
+</html>
