@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remembro - Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #000000;
+      --card: #0f0f10;
+      --border: #242426;
+      --text: #ffffff;
+      --muted: #c8c8c8;
+      --link: #9ecbff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    h1, h2, h3 {
+      margin: 0 0 16px;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--text);
+    }
+    h1 { font-size: 34px; line-height: 1.2; }
+    h2 { font-size: 22px; margin-top: 32px; }
+    h3 { font-size: 18px; margin-top: 20px; }
+    p, li {
+      font-size: 16px;
+      color: var(--muted);
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 16px 20px; padding: 0; }
+    li { margin: 0 0 8px; }
+    a { color: var(--link); }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .top {
+      margin-bottom: 24px;
+    }
+    .footer {
+      margin-top: 32px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .notice {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #111214;
+      margin: 18px 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="top">
+        <h1>Privacy Policy</h1>
+        <div class="meta">Remembro<br>Effective date: April 27, 2026<br>Last updated: April 27, 2026</div>
+        <p>Remembro is a voice-first personal assistant that helps you log meals, expenses, sleep, workouts, calendar events, and other day-to-day information using natural language. This Privacy Policy explains what information we collect, why we collect it, how it is processed, who it is shared with, how long it is kept, and what choices and rights you have.</p>
+        <p>By creating an account or using Remembro you confirm that you have read this policy and understand how your information is handled.</p>
+      </div>
+
+      <h2>1. Who We Are</h2>
+      <p>Remembro ("Remembro", "we", "us", "our") is the operator of the Remembro mobile application (the "App"). For privacy questions, data-access requests, or account-deletion requests you can reach us at <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a>.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We collect only the information reasonably needed to provide the App's features. We do not sell personal information and we do not use it for third-party advertising.</p>
+
+      <h3>2.1 Account Information</h3>
+      <ul>
+        <li><strong>Apple Sign-In identifier.</strong> When you sign in with Apple, we receive a stable user identifier and (only on first sign-in) the display name you choose to share. We do not receive your Apple ID password. If you choose Apple's "Hide My Email" option, we receive only the relay address.</li>
+        <li><strong>Account record.</strong> A unique user ID, an internal share identifier (used by other Remembro users to send you messages), and a timestamp. These are stored in our cloud backend (Google Firebase / Firestore).</li>
+      </ul>
+
+      <h3>2.2 Information You Enter Through Voice or Manual Entry</h3>
+      <ul>
+        <li><strong>Voice input and transcription.</strong> When you speak to the App, audio is captured locally on your device and processed by Apple's on-device or server-based Speech Recognition framework to produce text. The resulting text (the "transcript") may then be sent to Anthropic's API to interpret your request and extract structured details (such as a meal, an expense, a sleep entry, a calendar event, a message, or a question).</li>
+        <li><strong>Personal log entries.</strong> Items you log — for example meals (with estimated calories, protein, fat, carbs, vitamins and minerals), water, sleep duration and quality, expenses, income, workouts, calendar events, custom categories, and free-text notes — are stored locally on your device and synchronised with your Remembro cloud account so that they remain available after you reinstall the App or sign in on another device.</li>
+        <li><strong>Profile and health-related information you provide.</strong> Optional fields you can enter or have the AI extract from your speech, including name, age, gender, height, weight, previous weight, body-composition (body-fat %, muscle %), activity level, dietary or financial goals, primary currency, and a starting balance. This information is used to compute personal recommendations (such as daily calorie or protein targets) and to provide context to the AI when you ask questions.</li>
+      </ul>
+
+      <h3>2.3 Apple Health (HealthKit) Data</h3>
+      <p>If you grant permission, Remembro reads the following sample types from Apple Health on your device, in order to display your daily activity and to provide better wellness context:</p>
+      <ul>
+        <li>Workouts (type, duration, energy burned)</li>
+        <li>Active energy burned (kcal)</li>
+        <li>Step count</li>
+      </ul>
+      <div class="notice">
+        <p>Apple Health data is read on-device and is shown inside the App. We do not transmit raw HealthKit samples to our servers or to third parties. Aggregated daily totals (for example "today's active kcal") may be passed to Anthropic as part of a question's context only when you actively ask the App for an insight or summary.</p>
+      </div>
+      <p>You can revoke HealthKit access at any time in <em>Settings → Health → Data Access &amp; Devices → Remembro</em>. You can also revoke individual sample types from the same screen.</p>
+
+      <h3>2.4 Calendar Data</h3>
+      <p>If you grant permission, Remembro can create events in your Apple Calendar (iCloud or local), including the title, date, time, location, recurrence, and notes you specify. We do not read your existing calendar events. Events created by Remembro remain in your Calendar until you delete them and are not stored on our servers as separate copies.</p>
+
+      <h3>2.5 Location</h3>
+      <p>If you grant "While Using the App" location permission, Remembro derives a coarse <strong>city-level</strong> label (city and country) from your device location. The city label is used to give the AI context for currency, prices, weather, and similar regional factors. We do not collect precise GPS coordinates, and we do not store your location history on our servers — only the most recent city label may be sent in-line as part of an AI request.</p>
+
+      <h3>2.6 Contacts and Messaging Between Remembro Users</h3>
+      <p>Remembro lets you send short text messages to other Remembro users. To do so:</p>
+      <ul>
+        <li>You may add a contact by entering another user's Remembro share identifier (we do not access your iOS Contacts list).</li>
+        <li>The text you send, along with sender and recipient identifiers and a timestamp, is stored in our cloud backend so the recipient can receive it. Messages remain accessible to sender and recipient until removed.</li>
+        <li>Do not use messaging to transmit illegal, harmful, harassing, or sensitive personal content. See the Terms of Use for the acceptable-use policy.</li>
+      </ul>
+
+      <h3>2.7 Subscription and Purchase Information</h3>
+      <p>If you purchase a subscription or other in-app purchase, the payment is processed by Apple through the App Store. We may receive limited information from Apple such as transaction identifiers, product identifiers, subscription status, and renewal or expiration dates. We do not receive your payment-card or banking details.</p>
+
+      <h3>2.8 Diagnostics and Logs</h3>
+      <p>We may collect basic crash reports, error logs, latency metrics, and feature-usage signals to improve reliability and performance. These signals are technical in nature and are not used to build advertising profiles.</p>
+
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>To convert what you say into structured entries (meals, expenses, sleep, events, messages, profile updates, etc.) and store them in your journal.</li>
+        <li>To compute personal aggregates and recommendations (daily calorie totals, macro and micronutrient coverage, water intake, sleep patterns, expense balances, body-composition estimates).</li>
+        <li>To answer questions you ask, by sending the relevant context (recent log entries, profile basics, city, daily targets) together with your question to Anthropic's API and returning a short reply.</li>
+        <li>To create calendar events and deliver messages on your behalf.</li>
+        <li>To synchronise your data across devices and restore it after reinstall.</li>
+        <li>To verify and manage subscription entitlements and apply request limits.</li>
+        <li>To maintain App security, detect abuse, and improve performance.</li>
+        <li>To comply with applicable law.</li>
+      </ul>
+
+      <h2>4. Health and Wellness Information — Special Care</h2>
+      <p>Some of the information you enter — body weight, body composition, sleep, nutrition, workouts, mood-adjacent notes — may be considered sensitive in your jurisdiction. Remembro is a personal logging and informational tool only. <strong>It is not a medical device, does not provide medical advice, and is not intended to diagnose, treat, cure, or prevent any disease or condition.</strong></p>
+      <ul>
+        <li>We do not sell, rent, or share health-related information with advertisers, data brokers, insurers, or employers.</li>
+        <li>We do not use health-related information to target ads.</li>
+        <li>Health-related information you enter is used only to provide the App's features to you, including AI-generated summaries and recommendations.</li>
+        <li>Apple Health data read via HealthKit is processed on-device. We do not write data back to HealthKit unless you specifically opt in to a future feature that does so, in which case the entitlement and a clear in-App prompt will be shown to you.</li>
+      </ul>
+
+      <h2>5. AI Processing (Anthropic)</h2>
+      <p>Remembro uses Anthropic's API to interpret your transcribed speech and to generate short answers. When you make a request:</p>
+      <ul>
+        <li>Your transcribed text is sent to Anthropic together with a small contextual block (recent log aggregates, profile basics such as weight and goal, primary currency, daily targets, current city) so that the response is relevant and personalised.</li>
+        <li>We do not send raw audio to Anthropic. We do not send your Apple Sign-In identifier, full message history, contacts, or other users' data.</li>
+        <li>Anthropic processes the request under its own terms and privacy policy. According to Anthropic's commercial terms, customer inputs are not used to train its models by default.</li>
+      </ul>
+      <p>For details, see Anthropic's privacy policy at <a href="https://www.anthropic.com/legal/privacy">https://www.anthropic.com/legal/privacy</a>.</p>
+
+      <h2>6. Sharing of Information</h2>
+      <p>We do not sell your personal information. We share information only in the following limited cases:</p>
+      <ul>
+        <li><strong>With service providers acting on our behalf.</strong> Apple (Sign-In, Speech Recognition, App Store, HealthKit, EventKit), Google Firebase / Firestore (cloud database, authentication, push messaging infrastructure), and Anthropic (AI request processing). These providers are contractually limited to processing data only for the purposes of providing the service.</li>
+        <li><strong>With other Remembro users when you direct us to.</strong> When you send a message to another user, the message text and identifiers are visible to that user.</li>
+        <li><strong>For legal reasons.</strong> If required by law, regulation, legal process, or to protect rights, safety, security, or property.</li>
+        <li><strong>In a corporate transaction.</strong> If Remembro is involved in a merger, acquisition, restructuring, or asset sale, information may transfer to the successor, subject to the protections of this policy or a substantively equivalent one.</li>
+      </ul>
+
+      <h2>7. Third-Party Services We Rely On</h2>
+      <ul>
+        <li><strong>Apple Sign-In (Authentication Services).</strong> Identity provider for account creation.</li>
+        <li><strong>Apple Speech Framework.</strong> Speech-to-text transcription.</li>
+        <li><strong>Apple HealthKit.</strong> Reads workouts, active energy, and steps when you grant permission.</li>
+        <li><strong>Apple EventKit / Calendar.</strong> Creates calendar events when you grant permission.</li>
+        <li><strong>Apple StoreKit / App Store.</strong> Subscriptions and in-app purchases.</li>
+        <li><strong>Apple Core Location.</strong> Provides coarse city information when you grant permission.</li>
+        <li><strong>Google Firebase Authentication.</strong> Stores the Apple Sign-In session token.</li>
+        <li><strong>Google Firebase Cloud Firestore.</strong> Stores your encrypted-in-transit user document, journal entries, profile, contacts, and messages so they sync across devices.</li>
+        <li><strong>Anthropic API.</strong> Interprets your transcribed input and generates structured replies and short answers.</li>
+      </ul>
+
+      <h2>8. Data Retention</h2>
+      <p>We retain information only as long as reasonably necessary to provide the App, comply with law, resolve disputes, and enforce our agreements.</p>
+      <ul>
+        <li>Journal entries, profile, and contacts are kept until you delete them or delete your account.</li>
+        <li>Messages are kept until removed by sender or recipient or until the account is deleted.</li>
+        <li>Subscription records may be retained for accounting, fraud prevention, and support purposes for the period required by applicable law.</li>
+        <li>Diagnostic logs are typically kept for a short rolling window.</li>
+      </ul>
+
+      <h2>9. Account Deletion</h2>
+      <p>You can delete your Remembro account from inside the App (Profile → Delete Account) or by emailing <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a>. Account deletion:</p>
+      <ul>
+        <li>Removes your user document, journal entries, profile, and contacts from our cloud database.</li>
+        <li>Removes your Firebase Auth identity, so further sign-in re-creates a fresh, empty account.</li>
+        <li>Clears the App's local cache on your device.</li>
+        <li>Does not delete data already created in your Apple Calendar — you can delete those events directly in the Calendar app.</li>
+        <li>Does not delete subscription records that we are required to retain for tax or fraud-prevention purposes; those are kept in a minimised form.</li>
+      </ul>
+
+      <h2>10. Security</h2>
+      <p>We use reasonable technical and organisational safeguards designed to protect information, including HTTPS/TLS for transport, Firestore security rules that restrict every user's data to that user, and Apple-provided keychain storage for sign-in tokens on your device. However, no method of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+
+      <h2>11. Your Choices and Rights</h2>
+      <p>Depending on where you live, you may have the following rights regarding the information we hold about you:</p>
+      <ul>
+        <li><strong>Access and copy.</strong> Request a copy of the personal information we hold about you.</li>
+        <li><strong>Correction.</strong> Ask us to correct information that is inaccurate or out of date.</li>
+        <li><strong>Deletion.</strong> Delete your account in the App, or contact us to request deletion.</li>
+        <li><strong>Portability.</strong> Where the law applies, request a structured, machine-readable export.</li>
+        <li><strong>Objection / Restriction.</strong> Object to or restrict certain processing.</li>
+        <li><strong>Withdraw consent.</strong> Where processing is based on consent (e.g. microphone, calendar, location, HealthKit), revoke it in your device settings.</li>
+        <li><strong>Complaint.</strong> Lodge a complaint with your local data-protection authority.</li>
+      </ul>
+      <p>To exercise these rights, email <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a>. We may need to verify your identity before acting on a request.</p>
+
+      <h2>12. Children's Privacy</h2>
+      <p>Remembro is not directed to, and we do not knowingly collect personal information from, children under 13 (or the equivalent minimum age in your jurisdiction). If you believe a child has provided us with personal information, contact us and we will take appropriate steps to remove it.</p>
+
+      <h2>13. International Processing</h2>
+      <p>Your information may be processed in countries other than your own, including the United States, where our service providers (Apple, Google Firebase, Anthropic) operate. By using the App, you understand that information may be transferred and processed outside your country, subject to applicable law and to safeguards such as the European Commission's Standard Contractual Clauses where required.</p>
+
+      <h2>14. Disclosure for California Residents</h2>
+      <p>If you are a California resident, the California Consumer Privacy Act (CCPA/CPRA) grants you rights to know, delete, correct, and to opt out of the sale or sharing of personal information. We do not sell or share personal information for cross-context behavioural advertising. For requests, email <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a>.</p>
+
+      <h2>15. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date above. If the changes are material, we will use reasonable means to notify you in the App. Your continued use of Remembro after the updated policy becomes effective means you acknowledge the revised policy.</p>
+
+      <h2>16. Contact</h2>
+      <p>If you have any questions, requests, or concerns about this Privacy Policy or your information, contact us at <a href="mailto:volostnovdm@gmail.com">volostnovdm@gmail.com</a>.</p>
+
+      <div class="footer">© 2026 Remembro. All rights reserved.</div>
+    </div>
+  </div>
+</body>
+</html>
